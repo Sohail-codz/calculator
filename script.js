@@ -7,12 +7,16 @@ Array.from(buttons).forEach((button)=>{
       document.querySelector('input').value = string;
     }
     else if(e.target.innerHTML == 'RESET'){
-      string = ""
+      string = "";
       document.querySelector('input').value = string;
     }
     else if(e.target.innerHTML == 'DEL'){
         string = string.substring(0,string.length-1);
         document.querySelector('input').value = string;
+    }
+    else if(document.querySelector('input').value.length > 6){
+      string = "ERROR";
+      document.querySelector('input').value = string;
     }
     else{ 
     console.log(e.target)
